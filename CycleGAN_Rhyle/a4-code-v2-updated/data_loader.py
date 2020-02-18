@@ -17,8 +17,8 @@ def get_emoji_loader(emoji_type, opts):
                     transforms.Normalize((0.5,0.5,0.5), (0.5,0.5,0.5)) 
                 ])
 
-    train_path = os.path.join('/maps', 'train{}'.format(emoji_type))
-    test_path = os.path.join('/maps', 'test{}'.format(emoji_type))
+    train_path = os.path.join('./maps', 'train{}'.format(emoji_type))
+    test_path = os.path.join('./maps', 'test{}'.format(emoji_type))
 
     train_dataset = datasets.ImageFolder(train_path, transform)
     test_dataset = datasets.ImageFolder(test_path, transform)
